@@ -17,7 +17,6 @@
 برای دریافت لحظه‌ای سرورهای جدید و جلوگیری از قطعی، عضو کانال تلگرام ما شوید:
 
 * **لینک کانال:** [https://t.me/SalamProxy](https://t.me/SalamProxy)
-* **نسخه پیش‌نمایش وب:** [https://t.me/s/SalamProxy](https://t.me/s/SalamProxy)
 
 ---
 
