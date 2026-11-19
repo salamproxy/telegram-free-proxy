@@ -12,7 +12,7 @@
 برای اتصال مستقیم، روی لینک زیر کلیک کنید یا آن را کپی کرده و در بخش پیام‌های ذخیره شده (Saved Messages) تلگرام خود ارسال نمایید:
 
 ### 🟢 پروکسی شماره ۱ (همراه اول / ایرانسل / وای‌فای)
-[https://t.me/proxy?server=apple.salamcloud.net&port=443&secret=eed4a3eba2048f3cca4da991e0e4707ba3636c6f7564636f6e766572742e636f6d](tg://proxy?server=apple.salamcloud.net&port=443&secret=eed4a3eba2048f3cca4da991e0e4707ba3636c6f7564636f6e766572742e636f6d)
+https://t.me/proxy?server=apple.salamcloud.net&port=443&secret=eed4a3eba2048f3cca4da991e0e4707ba3636c6f7564636f6e766572742e636f6d
 
 🔥 **پروکسی‌های بیشتر و جدیدتر هر ساعت در کانال:** https://t.me/SalamProxy
 
