@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروکسی رایگان و پرسرعت تلگرام (MTProto) | آپدیت روزانه - SalamProxy</title>
+    <meta name="description" content="جدیدترین پروکسی‌های رایگان و ضد فیلتر تلگرام (MTProto FakeTLS) با پینگ پایین و اتصال مستقیم بدون نیاز به فیلترشکن برای همراه اول، ایرانسل و مخابرات.">
+    <meta name="keywords" content="پروکسی تلگرام, پروکسی رایگان تلگرام, پروکسی ضد فیلتر, پروکسی همراه اول, پروکسی ایرانسل, MTProto Proxy, SalamProxy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="پروکسی رایگان و پرسرعت تلگرام | SalamProxy">
+    <meta property="og:description" content="اتصال مستقیم با یک کلیک به پرسرعت‌ترین پروکسی‌های MTProto تلگرام - آپدیت مداوم">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-green: #2ea043;
+            --accent-green-hover: #3fb950;
+            --accent-blue: #2f81f7;
+            --accent-blue-hover: #58a6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 760px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        header h1 {
+            font-size: 1.65rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 20px;
+        }
+
+        .channel-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .channel-btn:hover {
+            background-color: var(--accent-blue-hover);
+        }
+
+        .proxy-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .proxy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .proxy-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .badge {
+            background: rgba(46, 160, 67, 0.15);
+            color: #3fb950;
+            border: 1px solid rgba(46, 160, 67, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .operators {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 16px;
+        }
+
+        .link-box {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            word-break: break-all;
+            direction: ltr;
+            text-align: left;
+            margin-bottom: 16px;
+            user-select: all;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-connect {
+            flex: 2;
+            min-width: 200px;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn-connect:hover {
+            background-color: var(--accent-green-hover);
+        }
+
+        .btn-copy {
+            flex: 1;
+            min-width: 140px;
+            background-color: #21262d;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 13px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .btn-copy:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+        }
+
+        .info-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .info-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
+
+        .info-section ul, .info-section ol {
+            padding-right: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .info-section li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: var(--accent-blue-hover);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>پروکسی رایگان و پرسرعت تلگرام (MTProto) 🚀</h1>
+        <p>جدیدترین پروکسی‌های ضد فیلتر با پینگ پایین و سرعت بالا، سازگار با اینترنت همراه اول، ایرانسل، رایتل و مخابرات</p>
+        <a href="tg://resolve?domain=SalamProxy" class="channel-btn">
+            📢 عضویت مستقیم در کانال @SalamProxy
+        </a>
+    </header>
+
+    <!-- کارت پروکسی شماره ۱ -->
+    <section class="proxy-card">
+        <div class="proxy-header">
+            <span class="proxy-title">پروکسی شماره ۱ (FakeTLS)</span>
+            <span class="badge">🟢 فعال و پرسرعت</span>
+        </div>
+        <div class="operators">سازگار با: همراه اول، ایرانسل، شاتل، مخابرات و وای‌فای خانگی</div>
+        
+        <div class="link-box" id="proxy-link-1">https://t.me/proxy?server=apple.salamcloud.net&port=443&secret=eed4a3eba2048f3cca4da991e0e4707ba3636c6f7564636f6e766572742e636f6d</div>
+        
+        <div class="actions">
+            <a href="tg://proxy?server=apple.salamcloud.net&port=443&secret=eed4a3eba2048f3cca4da991e0e4707ba3636c6f7564636f6e766572742e636f6d" class="btn-connect">
+                ⚡ اتصال مستقیم به تلگرام
+            </a>
+            <button class="btn-copy" onclick="copyProxy('proxy-link-1', this)">
+                📋 کپی لینک پروکسی
+            </button>
+        </div>
+    </section>
+
+    <!-- بخش راهنما و سئو -->
+    <section class="info-section">
+        <h2>🛠 راهنمای اتصال و رفع مشکل Checking</h2>
+        <ol>
+            <li>روی دکمه سبز رنگ <strong>«اتصال مستقیم به تلگرام»</strong> کلیک کنید تا برنامه تلگرام به صورت خودکار باز شود و گزینه <strong>Connect Proxy</strong> را بزنید.</li>
+            <li>در صورتی که برنامه تلگرام باز نشد، روی دکمه <strong>«کپی لینک پروکسی»</strong> کلیک کرده و لینک را در بخش <em>Saved Messages</em> تلگرام خود ارسال و لمس کنید.</li>
+            <li>حتماً از آخرین نسخه رسمی تلگرام استفاده کنید؛ نسخه‌های قدیمی از پروتکل امنیتی FakeTLS پشتیبانی نمی‌کنند.</li>
+            <li>برای دریافت پروکسی‌های جدیدتر و لحظه‌ای، وارد کانال <a href="https://t.me/SalamProxy" style="color:#58a6ff;">@SalamProxy</a> شوید.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>ارائه شده توسط کانال تلگرام <a href="https://t.me/SalamProxy">@SalamProxy</a> | پروتکل MTProto Proxy</p>
+    </footer>
+</div>
+
+<script>
+    function copyProxy(elementId, btn) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const originalText = btn.innerText;
+            btn.innerText = '✅ کپی شد!';
+            btn.style.borderColor = '#3fb950';
+            btn.style.color = '#3fb950';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.borderColor = '';
+                btn.style.color = '';
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
